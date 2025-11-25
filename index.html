@@ -75,6 +75,9 @@
     .candidate-profile {
       text-align: center;
       margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     /* Avatar & Profile */
@@ -96,6 +99,58 @@
       object-fit: cover;
       border: 3px solid #003d1d;
     }
+
+    /* --- NEW CANDIDATE BADGE STYLE --- */
+    .vote-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 215, 0, 0.1);
+      border: 1px solid var(--color-gold);
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-bottom: 12px; /* Spacing before name */
+      position: relative;
+      backdrop-filter: blur(4px);
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.15);
+      animation: pulseGold 2s infinite;
+      cursor: default;
+      transition: transform 0.3s;
+    }
+
+    .vote-badge:hover {
+      transform: scale(1.05);
+      background: rgba(255, 215, 0, 0.2);
+    }
+
+    @keyframes pulseGold {
+      0% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.4); }
+      70% { box-shadow: 0 0 0 6px rgba(255, 215, 0, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0); }
+    }
+
+    .vote-num {
+      background: var(--color-gold);
+      color: #003d1d;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 14px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .vote-txt {
+      color: var(--color-gold);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    /* ---------------------------------- */
 
     .candidate-name {
       font-size: 24px;
@@ -395,8 +450,8 @@
       }
       .app { 
         grid-template-columns: 1fr; 
-        width: 100%; 
-        height: auto; 
+        width: 100%;
+        height: auto;
         min-height: 100vh;
         overflow-y: visible; /* Enable scroll on mobile */
         border-radius: 0;
@@ -443,6 +498,11 @@
     <div class="candidate-profile">
       <div class="avatar-frame">
         <img src="https://i.ibb.co/39KNrsgF/photo.jpg" alt="Moussa" class="profile-img">
+      </div>
+      
+      <div class="vote-badge">
+        <span class="vote-num">1</span>
+        <span class="vote-txt">مرشح رقم (1) فوق السن</span>
       </div>
       <div class="candidate-name">د. أحمد السيد موسى</div>
       <div class="candidate-role">مرشح مجلس إدارة نادي الاتحاد السكندري</div>
@@ -495,7 +555,7 @@
           <div class="scenario-desc" id="scenarioText"></div>
           
           <div class="options-grid" id="optionsContainer">
-            </div>
+          </div>
 
           <div class="feedback-area" id="feedbackText"></div>
 
