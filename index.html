@@ -8,125 +8,113 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<div class="app">
-  <aside class="sidebar">
-    <div class="candidate-profile">
-      <div class="avatar-frame">
-        <img src="https://i.ibb.co/39KNrsgF/photo.jpg" alt="Moussa" class="profile-img">
-      </div>
-      
-      <div class="vote-badge">
-        <span class="vote-num">1</span>
-        <span class="vote-txt">مرشح رقم (1) فوق السن</span>
-      </div>
-      <div class="candidate-name">د. أحمد السيد موسى</div>
-      <div class="candidate-role">مرشح مجلس إدارة نادي الاتحاد السكندري</div>
-    </div>
-    
-    <img src="https://i.ibb.co/GfnQW6VH/1.jpg" alt="Campaign Slogan" class="campaign-banner">
-
-    <div class="bio-scroll">
-      <h3>الرؤية والهدف:</h3>
-      <p>برنامج انتخابي تفاعلي يضعك في مقعد المسؤولية. قراراتك اليوم تحدد مستقبل النادي غداً.</p>
-      
-      <h3>نبذة مختصرة:</h3>
-      <ul>
-        <li>دكتوراه إدارة أعمال - موارد بشرية</li>
-        <li>خبرة إدارة البيانات في WE</li>
-        <li>عضو مجلس صندوق الولاء</li>
-        <li>شريك مؤسس - لافانا ناتشورال</li>
-      </ul>
-      <p style="margin-top:15px; font-size:12px; opacity:0.6;">صوتي هو صوت الأعضاء، من أجل شفافية واستدامة.</p>
-    </div>
-  </aside>
-
-  <main class="main-area">    
-    <header class="top-header">
-      <div class="header-branding">
-        <img src="https://i.ibb.co/RkTMLMDr/image.jpg" alt="Al Ittihad Logo" class="header-logo">
-        <div>
-          <div class="app-title">رحلة موسى</div>
-          <div style="font-size:13px; opacity:0.8;">شارك في صناعة القرار داخل سيد البلد</div>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="candidate-profile">
+        <div class="avatar-frame">
+          <img src="https://i.ibb.co/39KNrsgF/photo.jpg" alt="Moussa" class="profile-img">
+        </div>
+        <div style="text-align:center; margin-bottom: 5px;">
+          <div class="candidate-name" style="font-size: 28px; margin-bottom: 2px;">د. أحمد السيد موسى</div>
+          <div class="candidate-role" style="font-size: 15px; margin-bottom: 15px; color: var(--color-gold);">مرشح رقم 1 فوق السن</div>
+        </div>
+        <div class="vote-badge">
+          <span class="vote-num">1</span>
+          <span class="vote-txt">مرشح رقم (1) فوق السن</span>
         </div>
       </div>
-      
-      <div style="text-align:left; min-width: 150px;">
-        <div style="font-size:12px; opacity:0.7;">نقاط القيادة (XP)</div>
-        <div style="font-size:24px; font-weight:900; color:var(--color-gold);" id="xpTotal">0</div>
+      <img src="https://i.ibb.co/GfnQW6VH/1.jpg" alt="Campaign Slogan" class="campaign-banner">
+      <div class="bio-scroll">
+        <h3>الرؤية والهدف:</h3>
+        <p>برنامج انتخابي تفاعلي يضعك في مقعد المسؤولية. قراراتك اليوم تحدد مستقبل النادي غداً.</p>
+        <h3>نبذة مختصرة:</h3>
+        <ul>
+          <li>دكتوراه إدارة أعمال - موارد بشرية</li>
+          <li>خبرة إدارة البيانات في WE</li>
+          <li>عضو مجلس صندوق الولاء</li>
+          <li>شريك مؤسس - لافانا ناتشورال</li>
+        </ul>
+        <p style="margin-top:15px; font-size:12px; opacity:0.6;">صوتي هو صوت الأعضاء، من أجل شفافية واستدامة.</p>
       </div>
-    </header>
-
-    <div class="progress-container">
-      <div class="progress-bar" id="progressFill"></div>
-    </div>
-    <div style="text-align:left; font-size:11px; margin-top:5px; opacity:0.6;" id="progressText">0%</div>
-
-    <section id="levelSection" class="game-card">
-      <div class="question-column">
-        <div class="question-area">
-          <div class="level-badge" id="levelTag">LEVEL 1</div>
-          <h2 class="scenario-title" id="levelTitle">تحميل...</h2>
-          <div class="scenario-desc" id="scenarioText"></div>
-          
-          <div class="options-grid" id="optionsContainer">
-          </div>
-
-          <div class="feedback-area" id="feedbackText"></div>
-
-          <div class="actions">
-            <button id="nextBtn" class="btn-primary" disabled>التالي</button>
-            <button id="resetBtn" class="btn-ghost">إعادة</button>
+      <a href="https://trialb104-spec.github.io/MussaElection/" class="return-btn">
+        <span class="return-btn-icon">🏠</span>
+        <span>الرجوع لصفحة الناخب الرئيسية</span>
+      </a>
+    </aside>
+    <main class="main-area">
+      <header class="top-header">
+        <div class="header-branding">
+          <img src="https://i.ibb.co/RkTMLMDr/image.jpg" alt="Al Ittihad Logo" class="header-logo">
+          <div>
+            <div class="app-title">رحلة موسى</div>
+            <div style="font-size:13px; opacity:0.8;">شارك في صناعة القرار داخل سيد البلد</div>
           </div>
         </div>
+        <div style="text-align:left; min-width: 150px;">
+          <div style="font-size:12px; opacity:0.7;">نقاط القيادة (XP)</div>
+          <div style="font-size:24px; font-weight:900; color:var(--color-gold);" id="xpTotal">0</div>
+        </div>
+      </header>
+      <div class="progress-container">
+        <div class="progress-bar" id="progressFill"></div>
       </div>
-
-      <div class="visual-column">
-        <div class="visual-panel">
-          <div class="icon-circle">
-            <div class="icon-emoji" id="orbIcon">💼</div>
-            <div class="icon-label" id="orbLabel">الموارد</div>
+      <div style="text-align:left; font-size:11px; margin-top:5px; opacity:0.6;" id="progressText">0%</div>
+      <section id="levelSection" class="game-card">
+        <div class="question-column">
+          <div class="question-area">
+            <div class="level-badge" id="levelTag">LEVEL 1</div>
+            <h2 class="scenario-title" id="levelTitle">تحميل...</h2>
+            <div class="scenario-desc" id="scenarioText"></div>
+            <div class="options-grid" id="optionsContainer">
+            </div>
+            <div class="feedback-area" id="feedbackText"></div>
+            <div class="actions">
+              <button id="nextBtn" class="btn-primary" disabled>التالي</button>
+              <button id="resetBtn" class="btn-ghost">إعادة</button>
+            </div>
           </div>
-          <div class="score-display">
-            <span class="score-lbl">نقاط الملف</span>
-            <span class="score-val" id="xpCurrentLevel">0</span>
+        </div>
+        <div class="visual-column">
+          <div class="visual-panel">
+            <div class="icon-circle">
+              <div class="icon-emoji" id="orbIcon">💼</div>
+              <div class="icon-label" id="orbLabel">الموارد</div>
+            </div>
+            <div class="score-display">
+              <span class="score-lbl">نقاط الملف</span>
+              <span class="score-val" id="xpCurrentLevel">0</span>
+            </div>
+            <div style="margin-top:15px; font-size:12px; text-align:center; color:var(--color-gold);" id="badgeHint">
+              الشارة المتاحة:<br><strong>المستثمر الذكي</strong>
+            </div>
           </div>
-          <div style="margin-top:15px; font-size:12px; text-align:center; color:var(--color-gold);" id="badgeHint">
-            الشارة المتاحة:<br><strong>المستثمر الذكي</strong>
+        </div>
+      </section>
+      <section id="summarySection" class="summary">
+        <div style="text-align:center; margin-bottom:20px;">
+          <h2 style="color:var(--color-gold); margin-bottom:10px;">نهاية الرحلة</h2>
+          <p>هكذا يبدو مستقبل نادي الاتحاد السكندري برؤية واعية.</p>
+        </div>
+        <div class="summary-grid">
+          <div class="summary-card">
+            <h3>النتيجة النهائية</h3>
+            <p>حصلت على <strong id="summaryXp" style="color:var(--color-gold);">0</strong> نقطة.</p>
+            <p style="font-size:13px; margin-top:5px; opacity:0.8;">كل نقطة تمثل خطوة نحو الاستدامة وتطوير النادي.</p>
+          </div>
+          <div class="summary-card">
+            <h3>الشارات المكتسبة</h3>
+            <div id="badgeList" style="display:flex; flex-wrap:wrap;"></div>
+          </div>
+          <div class="summary-card"
+            style="grid-column: 1 / -1; background:rgba(0,0,0,0.3); border-color:var(--color-gold);">
+            <h3>كلمة من موسى</h3>
+            <p>"التغيير ليس مجرد شعارات، بل قرارات مدروسة. اختياراتك اليوم أثبتت أنك شريك في المسؤولية."</p>
+            <button class="btn-primary" id="playAgainBtn" style="margin-top:15px; width:100%;">ابدأ الرحلة مرة أخرى</button>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section id="summarySection" class="summary">
-      <div style="text-align:center; margin-bottom:20px;">
-        <h2 style="color:var(--color-gold); margin-bottom:10px;">نهاية الرحلة</h2>
-        <p>هكذا يبدو مستقبل نادي الاتحاد السكندري برؤية واعية.</p>
-      </div>
-
-      <div class="summary-grid">
-        <div class="summary-card">
-          <h3>النتيجة النهائية</h3>
-          <p>حصلت على <strong id="summaryXp" style="color:var(--color-gold);">0</strong> نقطة.</p>
-          <p style="font-size:13px; margin-top:5px; opacity:0.8;">كل نقطة تمثل خطوة نحو الاستدامة وتطوير النادي.</p>
-        </div>
-        
-        <div class="summary-card">
-          <h3>الشارات المكتسبة</h3>
-          <div id="badgeList" style="display:flex; flex-wrap:wrap;"></div>
-        </div>
-
-        <div class="summary-card" style="grid-column: 1 / -1; background:rgba(0,0,0,0.3); border-color:var(--color-gold);">
-          <h3>كلمة من موسى</h3>
-          <p>"التغيير ليس مجرد شعارات، بل قرارات مدروسة. اختياراتك اليوم أثبتت أنك شريك في المسؤولية."</p>
-          <button class="btn-primary" id="playAgainBtn" style="margin-top:15px; width:100%;">ابدأ الرحلة مرة أخرى</button>
-        </div>
-      </div>
-    </section>
-
-  </main>
-</div>
-
-<script src="script.js"></script>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>

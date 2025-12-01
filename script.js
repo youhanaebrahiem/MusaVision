@@ -1,3 +1,4 @@
+// --- Game Data (Same Logic) ---
 const levels = [
   {
     id: "resources",
@@ -72,7 +73,7 @@ const levels = [
     ]
   }
 ];
-
+// --- Game Engine ---
 let state = {
   idx: 0,
   totalXP: 0,
@@ -81,6 +82,7 @@ let state = {
   selections: {}
 };
 
+// UI References
 const ui = {
   levelSection: document.getElementById("levelSection"),
   summarySection: document.getElementById("summarySection"),
@@ -112,9 +114,10 @@ function init() {
 
 function renderLevel() {
   const level = levels[state.idx];
-  
+
+  // Animation Reset
   ui.levelSection.style.animation = 'none';
-  ui.levelSection.offsetHeight;
+  ui.levelSection.offsetHeight; /* trigger reflow */
   ui.levelSection.style.animation = 'fadeIn 0.5s ease-out';
 
   ui.levelTag.innerText = `LEVEL ${state.idx + 1}`;
@@ -132,10 +135,7 @@ function renderLevel() {
   level.options.forEach((opt, i) => {
     const btn = document.createElement("button");
     btn.className = "option-btn";
-    btn.innerHTML = `
-      <span style="flex:1; margin-left:10px;">${opt.text}</span>
-      <span class="xp-tag">${opt.xp > 0 ? "+" : ""}${opt.xp} XP</span>
-    `;
+    btn.innerHTML = `        <span style="flex:1; margin-left:10px;">${opt.text}</span>        <span class="xp-tag">${opt.xp > 0 ? "+" : ""}${opt.xp} XP</span>      `;
     btn.onclick = () => selectOption(i, btn, opt);
     ui.options.appendChild(btn);
   });
@@ -150,13 +150,13 @@ function selectOption(index, btn, option) {
   btn.classList.remove("disabled");
 
   const level = levels[state.idx];
-  
+
   if (!state.selections[state.idx]) {
     state.completed++;
   }
-  
-  state.selections[state.idx] = { xp: option.xp, badge: level.badgeName, max: Math.max(...level.options.map(o=>o.xp)) };
-  
+
+  state.selections[state.idx] = { xp: option.xp, badge: level.badgeName, max: Math.max(...level.options.map(o => o.xp)) };
+
   let calcTotal = 0;
   Object.values(state.selections).forEach(s => calcTotal += s.xp);
   state.totalXP = calcTotal;
@@ -166,7 +166,7 @@ function selectOption(index, btn, option) {
   ui.xpTotal.innerText = state.totalXP;
   ui.feedback.innerHTML = `<span>تحليل القرار:</span> ${option.feedback}`;
   ui.nextBtn.disabled = false;
-  
+
   updateProgress();
 }
 
@@ -189,20 +189,15 @@ function showSummary() {
   ui.levelSection.style.display = "none";
   ui.summarySection.classList.add("active");
   ui.summaryXp.innerText = state.totalXP;
-  
+
   ui.badgeList.innerHTML = "";
   levels.forEach((lvl, i) => {
     const sel = state.selections[i];
     if (sel && sel.xp === sel.max) {
-      ui.badgeList.innerHTML += `
-        <div class="badge-pill">
-          <span>${lvl.icon}</span>
-          <span>${lvl.badgeName}</span>
-        </div>
-      `;
+      ui.badgeList.innerHTML += `          <div class="badge-pill">            <span>${lvl.icon}</span>            <span>${lvl.badgeName}</span>          </div>        `;
     }
   });
-  
+
   if (ui.badgeList.innerHTML === "") {
     ui.badgeList.innerHTML = "<span style='opacity:0.6; font-size:12px;'>لم تحصل على شارات، لكن مشاركتك هي الأهم!</span>";
   }
