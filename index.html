@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>رحلة موسى – الاتحاد السكندري</title>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;500;700;900&display=swap" rel="stylesheet">
-  
-  <style>
+    <style>
     :root {
       /* Al Ittihad Alexandria Palette */
       --color-green-dark: #003d1d;
@@ -31,7 +30,7 @@
     body {
       font-family: 'Cairo', sans-serif;
       /* Stadium Atmosphere Background */
-      background: 
+      background:
         radial-gradient(circle at 10% 20%, rgba(22, 163, 74, 0.2) 0%, transparent 40%),
         radial-gradient(circle at 90% 80%, rgba(255, 215, 0, 0.1) 0%, transparent 40%),
         linear-gradient(135deg, #002a14 0%, #004d25 100%);
@@ -109,7 +108,8 @@
       border: 1px solid var(--color-gold);
       padding: 6px 16px;
       border-radius: 20px;
-      margin-bottom: 12px; /* Spacing before name */
+      margin-bottom: 12px;
+      /* Spacing before name */
       position: relative;
       backdrop-filter: blur(4px);
       box-shadow: 0 0 15px rgba(255, 215, 0, 0.15);
@@ -124,9 +124,17 @@
     }
 
     @keyframes pulseGold {
-      0% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.4); }
-      70% { box-shadow: 0 0 0 6px rgba(255, 215, 0, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0); }
+      0% {
+        box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.4);
+      }
+
+      70% {
+        box-shadow: 0 0 0 6px rgba(255, 215, 0, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(255, 215, 0, 0);
+      }
     }
 
     .vote-num {
@@ -140,7 +148,7 @@
       justify-content: center;
       font-weight: 900;
       font-size: 14px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     }
 
     .vote-txt {
@@ -150,19 +158,19 @@
       letter-spacing: 0.5px;
       text-transform: uppercase;
     }
-    /* ---------------------------------- */
 
+    /* ---------------------------------- */
     .candidate-name {
       font-size: 24px;
       font-weight: 800;
       color: var(--color-gold);
       margin-bottom: 5px;
-      text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     }
 
     .candidate-role {
       font-size: 13px;
-      color: rgba(255,255,255,0.8);
+      color: rgba(255, 255, 255, 0.8);
       letter-spacing: 0.5px;
       margin-bottom: 20px;
     }
@@ -172,10 +180,11 @@
       width: 100%;
       border-radius: 12px;
       border: 1px solid rgba(255, 215, 0, 0.3);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
       margin-bottom: 20px;
       transition: transform 0.3s ease;
     }
+
     .campaign-banner:hover {
       transform: scale(1.02);
       border-color: var(--color-gold);
@@ -188,18 +197,75 @@
       margin-top: 5px;
       font-size: 13px;
       line-height: 1.7;
-      color: rgba(255,255,255,0.9);
-      background: rgba(0,0,0,0.2);
+      color: rgba(255, 255, 255, 0.9);
+      background: rgba(0, 0, 0, 0.2);
       border-radius: 10px;
       padding: 10px;
+      margin-bottom: 15px; /* Add margin before the new button */
     }
-    
-    .bio-scroll h3 { color: var(--color-gold); font-size: 14px; margin-top: 10px; margin-bottom: 5px; }
-    .bio-scroll ul { list-style: none; padding-right: 10px; }
-    .bio-scroll li { margin-bottom: 8px; position: relative; }
-    .bio-scroll li::before { content: "•"; color: var(--color-gold); position: absolute; right: -12px; }
-    .bio-scroll::-webkit-scrollbar { width: 4px; }
-    .bio-scroll::-webkit-scrollbar-thumb { background: var(--color-green-light); border-radius: 4px; }
+
+    .bio-scroll h3 {
+      color: var(--color-gold);
+      font-size: 14px;
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+
+    .bio-scroll ul {
+      list-style: none;
+      padding-right: 10px;
+    }
+
+    .bio-scroll li {
+      margin-bottom: 8px;
+      position: relative;
+    }
+
+    .bio-scroll li::before {
+      content: "•";
+      color: var(--color-gold);
+      position: absolute;
+      right: -12px;
+    }
+
+    .bio-scroll::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    .bio-scroll::-webkit-scrollbar-thumb {
+      background: var(--color-green-light);
+      border-radius: 4px;
+    }
+
+    /* --- NEW RETURN BUTTON STYLE --- */
+    .return-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(90deg, var(--color-green-light) 0%, var(--color-green-mid) 100%);
+      color: var(--color-white);
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4), 0 0 10px rgba(22, 163, 74, 0.5);
+      transition: all 0.3s ease;
+      border: 1px solid var(--color-green-light);
+    }
+
+    .return-btn:hover {
+      background: linear-gradient(90deg, var(--color-green-mid) 0%, var(--color-green-light) 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5), 0 0 15px var(--color-gold);
+    }
+
+    .return-btn-icon {
+      font-size: 18px;
+      color: var(--color-gold);
+    }
 
     /* --- MAIN CONTENT DESIGN --- */
     .main-area {
@@ -216,7 +282,7 @@
       align-items: center;
       margin-bottom: 25px;
       padding-bottom: 15px;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .header-branding {
@@ -229,7 +295,7 @@
       width: 60px;
       height: 60px;
       object-fit: contain;
-      filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));
+      filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
       background: #fff;
       border-radius: 12px;
       padding: 2px;
@@ -247,7 +313,7 @@
     .progress-container {
       width: 100%;
       height: 10px;
-      background: rgba(0,0,0,0.4);
+      background: rgba(0, 0, 0, 0.4);
       border-radius: 20px;
       overflow: hidden;
       margin-top: 10px;
@@ -272,15 +338,22 @@
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .question-area {
-      background: rgba(255,255,255,0.03);
+      background: rgba(255, 255, 255, 0.03);
       border-radius: 20px;
       padding: 25px;
-      border: 1px solid rgba(255,255,255,0.05);
+      border: 1px solid rgba(255, 255, 255, 0.05);
     }
 
     .level-badge {
@@ -295,25 +368,34 @@
       box-shadow: var(--shadow-gold);
     }
 
-    .scenario-title { font-size: 22px; font-weight: 700; margin-bottom: 8px; color: var(--color-white); }
+    .scenario-title {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--color-white);
+    }
 
     .scenario-desc {
       font-size: 15px;
       color: #ccc;
       margin-bottom: 20px;
       line-height: 1.6;
-      background: rgba(0,0,0,0.2);
+      background: rgba(0, 0, 0, 0.2);
       padding: 15px;
       border-radius: 10px;
       border-right: 3px solid var(--color-gold);
     }
 
     /* Options Styling */
-    .options-grid { display: flex; flex-direction: column; gap: 12px; }
+    .options-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
 
     .option-btn {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       padding: 15px 20px;
       border-radius: 12px;
       color: #fff;
@@ -342,22 +424,33 @@
       font-weight: 700;
       box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
     }
-    
-    .option-btn.disabled { opacity: 0.5; pointer-events: none; }
 
-    .xp-tag { font-size: 12px; font-weight: 700; opacity: 0.7; }
-    .option-btn.selected .xp-tag { opacity: 1; color: #000; }
+    .option-btn.disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    .xp-tag {
+      font-size: 12px;
+      font-weight: 700;
+      opacity: 0.7;
+    }
+
+    .option-btn.selected .xp-tag {
+      opacity: 1;
+      color: #000;
+    }
 
     /* Visual Side Panel */
     .visual-panel {
-      background: rgba(0,0,0,0.2);
+      background: rgba(0, 0, 0, 0.2);
       border-radius: 20px;
       padding: 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
-      border: 1px solid rgba(255,255,255,0.05);
+      border: 1px solid rgba(255, 255, 255, 0.05);
     }
 
     .icon-circle {
@@ -369,35 +462,74 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-      border: 4px solid rgba(255,255,255,0.1);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+      border: 4px solid rgba(255, 255, 255, 0.1);
       margin-bottom: 20px;
       animation: float 4s ease-in-out infinite;
     }
 
     @keyframes float {
-      0% { transform: translateY(0px); }
-      50% { transform: translateY(-10px); }
-      100% { transform: translateY(0px); }
+      0% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+
+      100% {
+        transform: translateY(0px);
+      }
     }
 
-    .icon-emoji { font-size: 40px; margin-bottom: 5px; }
-    .icon-label { font-size: 12px; color: #fff; font-weight: 600; }
+    .icon-emoji {
+      font-size: 40px;
+      margin-bottom: 5px;
+    }
+
+    .icon-label {
+      font-size: 12px;
+      color: #fff;
+      font-weight: 600;
+    }
 
     .score-display {
       width: 100%;
-      background: rgba(0,0,0,0.3);
+      background: rgba(0, 0, 0, 0.3);
       padding: 15px;
       border-radius: 12px;
       text-align: center;
     }
-    .score-val { font-size: 24px; color: var(--color-gold); font-weight: 800; display: block; }
-    .score-lbl { font-size: 12px; opacity: 0.7; }
 
-    .feedback-area { margin-top: 15px; min-height: 40px; font-size: 14px; color: #e0e0e0; }
-    .feedback-area span { color: var(--color-gold); font-weight: 700; }
+    .score-val {
+      font-size: 24px;
+      color: var(--color-gold);
+      font-weight: 800;
+      display: block;
+    }
 
-    .actions { margin-top: 20px; display: flex; gap: 15px; }
+    .score-lbl {
+      font-size: 12px;
+      opacity: 0.7;
+    }
+
+    .feedback-area {
+      margin-top: 15px;
+      min-height: 40px;
+      font-size: 14px;
+      color: #e0e0e0;
+    }
+
+    .feedback-area span {
+      color: var(--color-gold);
+      font-weight: 700;
+    }
+
+    .actions {
+      margin-top: 20px;
+      display: flex;
+      gap: 15px;
+    }
 
     .btn-primary {
       background: var(--color-gold);
@@ -411,24 +543,61 @@
       box-shadow: var(--shadow-gold);
       transition: transform 0.2s;
     }
-    .btn-primary:hover { transform: scale(1.05); background: var(--color-gold-hover); }
-    .btn-primary:disabled { background: #555; color: #888; box-shadow: none; cursor: not-allowed; transform: none; }
+
+    .btn-primary:hover {
+      transform: scale(1.05);
+      background: var(--color-gold-hover);
+    }
+
+    .btn-primary:disabled {
+      background: #555;
+      color: #888;
+      box-shadow: none;
+      cursor: not-allowed;
+      transform: none;
+    }
 
     .btn-ghost {
       background: transparent;
-      border: 1px solid rgba(255,255,255,0.3);
+      border: 1px solid rgba(255, 255, 255, 0.3);
       color: #fff;
       padding: 10px 20px;
       border-radius: 50px;
       cursor: pointer;
     }
-    .btn-ghost:hover { background: rgba(255,255,255,0.1); }
 
-    .summary { display: none; animation: fadeIn 0.6s ease; }
-    .summary.active { display: block; }
-    .summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px; }
-    .summary-card { background: rgba(255,255,255,0.05); padding: 15px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); }
-    .summary-card h3 { color: var(--color-gold); margin-bottom: 10px; font-size: 16px; }
+    .btn-ghost:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .summary {
+      display: none;
+      animation: fadeIn 0.6s ease;
+    }
+
+    .summary.active {
+      display: block;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .summary-card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 15px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .summary-card h3 {
+      color: var(--color-gold);
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
 
     .badge-pill {
       display: inline-flex;
@@ -445,61 +614,89 @@
     /* --- MOBILE RESPONSIVE UPDATES --- */
     @media (max-width: 900px) {
       body {
-        align-items: flex-start; /* Allows scrolling from top */
+        align-items: flex-start;
+        /* Allows scrolling from top */
         padding-top: 10px;
       }
-      .app { 
-        grid-template-columns: 1fr; 
+
+      .app {
+        grid-template-columns: 1fr;
         width: 100%;
         height: auto;
         min-height: 100vh;
-        overflow-y: visible; /* Enable scroll on mobile */
+        overflow-y: visible;
+        /* Enable scroll on mobile */
         border-radius: 0;
       }
-      
+
       /* Show Sidebar on Mobile (Top Section) */
-      .sidebar { 
-        display: flex; /* Changed from none to flex */
+      .sidebar {
+        display: flex;
+        /* Changed from none to flex */
         width: 100%;
         border-left: none;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         padding: 20px;
         height: auto;
       }
 
       /* Reduce Sidebar clutter on mobile */
-      .campaign-banner { display: none; } /* Hide the banner image to save space */
-      .bio-scroll { 
-        max-height: 180px; /* Limit bio height */
+      .campaign-banner {
+        display: none;
+      }
+
+      /* Hide the banner image to save space */
+      .bio-scroll {
+        max-height: 180px;
+        /* Limit bio height */
+        margin-bottom: 15px;
+      }
+
+      .main-area {
+        padding: 20px 15px;
+      }
+
+      .header-branding .header-logo {
+        width: 50px;
+        height: 50px;
+      }
+
+      .game-card {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .visual-panel {
+        flex-direction: row;
+        padding: 10px;
+        margin-bottom: 20px;
+        order: -1;
+        /* Move score above question */
+      }
+
+      .icon-circle {
+        width: 60px;
+        height: 60px;
         margin-bottom: 0;
       }
 
-      .main-area { padding: 20px 15px; }
-
-      .header-branding .header-logo { width: 50px; height: 50px; }
-      .game-card { grid-template-columns: 1fr; gap: 20px; }
-      
-      .visual-panel { 
-        flex-direction: row; 
-        padding: 10px; 
-        margin-bottom: 20px; 
-        order: -1; /* Move score above question */
+      .icon-emoji {
+        font-size: 24px;
       }
-      .icon-circle { width: 60px; height: 60px; margin-bottom: 0; }
-      .icon-emoji { font-size: 24px; }
-      .icon-label { display: none; }
+
+      .icon-label {
+        display: none;
+      }
     }
-  </style>
+    </style>
 </head>
 <body>
-
 <div class="app">
   <aside class="sidebar">
     <div class="candidate-profile">
       <div class="avatar-frame">
         <img src="https://i.ibb.co/39KNrsgF/photo.jpg" alt="Moussa" class="profile-img">
       </div>
-      
       <div class="vote-badge">
         <span class="vote-num">1</span>
         <span class="vote-txt">مرشح رقم (1) فوق السن</span>
@@ -507,13 +704,10 @@
       <div class="candidate-name">د. أحمد السيد موسى</div>
       <div class="candidate-role">مرشح مجلس إدارة نادي الاتحاد السكندري</div>
     </div>
-    
     <img src="https://i.ibb.co/GfnQW6VH/1.jpg" alt="Campaign Slogan" class="campaign-banner">
-
     <div class="bio-scroll">
       <h3>الرؤية والهدف:</h3>
       <p>برنامج انتخابي تفاعلي يضعك في مقعد المسؤولية. قراراتك اليوم تحدد مستقبل النادي غداً.</p>
-      
       <h3>نبذة مختصرة:</h3>
       <ul>
         <li>دكتوراه إدارة أعمال - موارد بشرية</li>
@@ -523,10 +717,14 @@
       </ul>
       <p style="margin-top:15px; font-size:12px; opacity:0.6;">صوتي هو صوت الأعضاء، من أجل شفافية واستدامة.</p>
     </div>
-  </aside>
 
+    <a href="https://trialb104-spec.github.io/MussaElection/" class="return-btn">
+        <span class="return-btn-icon">🏠</span>
+        <span>الرجوع لصفحة الناخب الرئيسية</span>
+    </a>
+
+  </aside>
   <main class="main-area">
-    
     <header class="top-header">
       <div class="header-branding">
         <img src="https://i.ibb.co/RkTMLMDr/image.jpg" alt="Al Ittihad Logo" class="header-logo">
@@ -535,37 +733,30 @@
           <div style="font-size:13px; opacity:0.8;">شارك في صناعة القرار داخل سيد البلد</div>
         </div>
       </div>
-      
       <div style="text-align:left; min-width: 150px;">
         <div style="font-size:12px; opacity:0.7;">نقاط القيادة (XP)</div>
         <div style="font-size:24px; font-weight:900; color:var(--color-gold);" id="xpTotal">0</div>
       </div>
     </header>
-
     <div class="progress-container">
       <div class="progress-bar" id="progressFill"></div>
     </div>
     <div style="text-align:left; font-size:11px; margin-top:5px; opacity:0.6;" id="progressText">0%</div>
-
     <section id="levelSection" class="game-card">
       <div class="question-column">
         <div class="question-area">
           <div class="level-badge" id="levelTag">LEVEL 1</div>
           <h2 class="scenario-title" id="levelTitle">تحميل...</h2>
           <div class="scenario-desc" id="scenarioText"></div>
-          
           <div class="options-grid" id="optionsContainer">
           </div>
-
           <div class="feedback-area" id="feedbackText"></div>
-
           <div class="actions">
             <button id="nextBtn" class="btn-primary" disabled>التالي</button>
             <button id="resetBtn" class="btn-ghost">إعادة</button>
           </div>
         </div>
       </div>
-
       <div class="visual-column">
         <div class="visual-panel">
           <div class="icon-circle">
@@ -582,36 +773,31 @@
         </div>
       </div>
     </section>
-
     <section id="summarySection" class="summary">
       <div style="text-align:center; margin-bottom:20px;">
         <h2 style="color:var(--color-gold); margin-bottom:10px;">نهاية الرحلة</h2>
         <p>هكذا يبدو مستقبل نادي الاتحاد السكندري برؤية واعية.</p>
       </div>
-
       <div class="summary-grid">
         <div class="summary-card">
           <h3>النتيجة النهائية</h3>
           <p>حصلت على <strong id="summaryXp" style="color:var(--color-gold);">0</strong> نقطة.</p>
           <p style="font-size:13px; margin-top:5px; opacity:0.8;">كل نقطة تمثل خطوة نحو الاستدامة وتطوير النادي.</p>
         </div>
-        
         <div class="summary-card">
           <h3>الشارات المكتسبة</h3>
           <div id="badgeList" style="display:flex; flex-wrap:wrap;"></div>
         </div>
-
-        <div class="summary-card" style="grid-column: 1 / -1; background:rgba(0,0,0,0.3); border-color:var(--color-gold);">
+        <div class="summary-card"
+          style="grid-column: 1 / -1; background:rgba(0,0,0,0.3); border-color:var(--color-gold);">
           <h3>كلمة من موسى</h3>
           <p>"التغيير ليس مجرد شعارات، بل قرارات مدروسة. اختياراتك اليوم أثبتت أنك شريك في المسؤولية."</p>
           <button class="btn-primary" id="playAgainBtn" style="margin-top:15px; width:100%;">ابدأ الرحلة مرة أخرى</button>
         </div>
       </div>
     </section>
-
   </main>
 </div>
-
 <script>
   // --- Game Data (Same Logic) ---
   const levels = [
@@ -688,7 +874,6 @@
       ]
     }
   ];
-
   // --- Game Engine ---
   let state = {
     idx: 0,
@@ -730,7 +915,7 @@
 
   function renderLevel() {
     const level = levels[state.idx];
-    
+
     // Animation Reset
     ui.levelSection.style.animation = 'none';
     ui.levelSection.offsetHeight; /* trigger reflow */
@@ -769,13 +954,13 @@
     btn.classList.remove("disabled");
 
     const level = levels[state.idx];
-    
+
     if (!state.selections[state.idx]) {
       state.completed++;
     }
-    
-    state.selections[state.idx] = { xp: option.xp, badge: level.badgeName, max: Math.max(...level.options.map(o=>o.xp)) };
-    
+
+    state.selections[state.idx] = { xp: option.xp, badge: level.badgeName, max: Math.max(...level.options.map(o => o.xp)) };
+
     let calcTotal = 0;
     Object.values(state.selections).forEach(s => calcTotal += s.xp);
     state.totalXP = calcTotal;
@@ -785,7 +970,7 @@
     ui.xpTotal.innerText = state.totalXP;
     ui.feedback.innerHTML = `<span>تحليل القرار:</span> ${option.feedback}`;
     ui.nextBtn.disabled = false;
-    
+
     updateProgress();
   }
 
@@ -808,7 +993,7 @@
     ui.levelSection.style.display = "none";
     ui.summarySection.classList.add("active");
     ui.summaryXp.innerText = state.totalXP;
-    
+
     ui.badgeList.innerHTML = "";
     levels.forEach((lvl, i) => {
       const sel = state.selections[i];
@@ -821,7 +1006,7 @@
         `;
       }
     });
-    
+
     if (ui.badgeList.innerHTML === "") {
       ui.badgeList.innerHTML = "<span style='opacity:0.6; font-size:12px;'>لم تحصل على شارات، لكن مشاركتك هي الأهم!</span>";
     }
@@ -832,6 +1017,5 @@
 
   init();
 </script>
-
 </body>
 </html>
